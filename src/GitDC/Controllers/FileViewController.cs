@@ -21,8 +21,6 @@ namespace GitDC.Controllers
 
         public async Task<IActionResult> GetTreeView(string userName, string repoName, string id, string path)
         {
-            XTrace.UseConsole();
-
             var DCRepositoriesService = Ioc.Create<IDCRepositoriesService>();
 
             repoName = Path.Combine(userName, repoName);
@@ -47,8 +45,6 @@ namespace GitDC.Controllers
 
                 if (model.Entries == null && model.ReferenceName != "HEAD")
                     return RedirectToAction("Tree", new { path = model.ReferenceName });
-
-                XTrace.WriteLine(model.ToJson());
 
                 return View("Tree", model);
             }
