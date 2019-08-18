@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace GitDC.Controllers
 {
-    public class DCControllerBase : WebControllerBase
+    public class DCControllerBase : WebNoTraceLogControllerBase
     {
         protected GitCommandResult GitCommand(string repoName, string service, bool advertiseRefs, bool endStreamWithNull = true)
         {

@@ -7,6 +7,7 @@ using GitDC.Git.Cache;
 using GitDC.Models;
 using LibGit2Sharp;
 using System;
+using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -266,6 +267,50 @@ namespace GitDC.Git
             return new DirectoryInfo(Path.Combine(SiteSetting.Current.GitConfig.RepositoryPath, project));
         }
 
+        #endregion
+
+        #region RunGitCmd
+        // un-safe implementation
+        private void RunGitCmd(string serviceName, bool advertiseRefs, Stream inStream, Stream outStream)
+        {
+            var args = serviceName + " --stateless-rpc";
+            if (advertiseRefs)
+                args += " --advertise-refs";
+            args += " \"" + _repositoryPath + "\"";
+
+            var info = new System.Diagnostics.ProcessStartInfo(Path.Combine(SiteSetting.Current.GitConfig.GitCorePath, "git.exe"), args)
+            {
+                CreateNoWindow = true,
+                RedirectStandardError = true,
+                RedirectStandardInput = true,
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                WorkingDirectory = Path.GetDirectoryName(SiteSetting.Current.GitConfig.RepositoryPath),
+            };
+
+            using (var process = System.Diagnostics.Process.Start(info))
+            {
+                inStream.CopyTo(process.StandardInput.BaseStream);
+                process.StandardInput.Close();
+                process.StandardOutput.BaseStream.CopyTo(outStream);
+
+                process.WaitForExit();
+            }
+        }
+        #endregion
+
+        #region Git Smart HTTP Transport
+        public void InfoRefs(string service, Stream inStream, Stream outStream)
+        {
+            Contract.Requires(service == "receive-pack" || service == "upload-pack");
+            RunGitCmd(service, true, inStream, outStream);
+        }
+
+        public void ExecutePack(string service, Stream inStream, Stream outStream)
+        {
+            Contract.Requires(service == "receive-pack" || service == "upload-pack");
+            RunGitCmd(service, false, inStream, outStream);
+        }
         #endregion
 
         #region IDisposable Members
