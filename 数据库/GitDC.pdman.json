@@ -357,7 +357,7 @@
             },
             {
               "name": "ResponseContent",
-              "type": "LongText",
+              "type": "Text",
               "remark": "",
               "chnname": "响应内容"
             },
@@ -788,14 +788,35 @@
         }
       },
       {
-        "name": "大文本",
-        "code": "LongText",
+        "name": "文本",
+        "code": "Text",
         "apply": {
           "JAVA": {
             "type": "String"
           },
           "MYSQL": {
             "type": "TEXT"
+          },
+          "ORACLE": {
+            "type": "CLOB"
+          },
+          "SQLServer": {
+            "type": "TEXT"
+          },
+          "PostgreSQL": {
+            "type": "TEXT"
+          }
+        }
+      },
+      {
+        "name": "长文本",
+        "code": "LongText",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "LONGTEXT"
           },
           "ORACLE": {
             "type": "CLOB"
