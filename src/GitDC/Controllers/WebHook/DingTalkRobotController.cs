@@ -190,6 +190,18 @@ namespace GitDC.Controllers
 
                         var response = await SendDingTalkMessage(new { msgtype, markdown, at });
 
+                        var modelwhlogs = await WHLogsService.GetByIdAsync(Id);
+                        var dicResponse = new Dictionary<string, string>();
+                        foreach (var row in response.Headers)
+                        {
+                            dicResponse.Add(row.Key, row.Value.Join());
+                        }
+                        modelwhlogs.ResponseTop = dicResponse.ToJson();
+                        modelwhlogs.ResponseContent = await response.Content.ReadAsStringAsync();
+                        modelwhlogs.ResponseBody = response.ToJson();
+
+                        await WHLogsService.UpdateAsync(modelwhlogs);
+
                         return Ok(response);
                     }
             }
