@@ -17,6 +17,7 @@ using Newtonsoft.Json.Linq;
 using AngleSharp.Html.Parser;
 using System.Linq;
 using Ding.Collections;
+using Ding;
 
 namespace GitDC.Controllers
 {
@@ -170,6 +171,12 @@ namespace GitDC.Controllers
                         if (text.IsNullOrEmpty())
                         {
                             return Fail("内容为空");
+                        }
+
+                        var comment = modelContent["comment"]?.ToString();
+                        if (!comment.SafeString().IsNullOrEmpty())
+                        {
+                            text = text.Replace("[", $" {comment} [");
                         }
 
                         var title = text.Split("[")[0];
