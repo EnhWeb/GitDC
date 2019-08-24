@@ -18,6 +18,7 @@ using AngleSharp.Html.Parser;
 using System.Linq;
 using Ding.Collections;
 using Ding;
+using Ding.Extension;
 
 namespace GitDC.Controllers
 {
@@ -176,7 +177,8 @@ namespace GitDC.Controllers
                         var comment = modelContent["comment"]?.ToString();
                         if (!comment.SafeString().IsNullOrEmpty())
                         {
-                            text = text.Replace("[", $" {comment} [");
+                            comment = StringExtensions.DropHTML(comment.SafeString());
+                            text = text.Replace("[", $" 当前状态为：{comment} [");
                         }
 
                         var title = text.Split("[")[0];
