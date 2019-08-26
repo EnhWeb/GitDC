@@ -38,6 +38,7 @@ namespace GitDC.Controllers
         /// <returns></returns>
         public async Task<IActionResult> Send([FromQuery]string Access_Token)
         {
+            XTrace.UseConsole();
             var WHMiddlewareService = Ioc.Create<IWHMiddlewareService>();
             var WHLogsService = Ioc.Create<IWHLogsService>();
 
@@ -74,6 +75,10 @@ namespace GitDC.Controllers
 
                 Id = await WHLogsService.CreateAsync(modelwhlogs);
             }
+            else
+            {
+                return Fail("没有内容");
+            }
 
             switch (model.Source)
             {
@@ -84,13 +89,8 @@ namespace GitDC.Controllers
 
                         var modelContent = JObject.Parse(content);
                         var repository = modelContent["repository"];
-                        var pusher = modelContent["pusher"];
-                        var Ref = modelContent["ref"].ToString();
-                        var commits = JArray.Parse(modelContent["commits"].ToString());
 
                         var repositorychild = repository.Children().OfType<JProperty>()
-                            .ToDictionary(p => p.Name, p => p.Value);
-                        var pushchild = pusher.Children().OfType<JProperty>()
                             .ToDictionary(p => p.Name, p => p.Value);
 
                         var parser = new HtmlParser();
@@ -104,23 +104,48 @@ namespace GitDC.Controllers
                         {
                             if (dic["X-Coding-Event"] == "push")
                             {
+                                var pusher = modelContent["pusher"];
+                                var pushchild = pusher.Children().OfType<JProperty>()
+                            .ToDictionary(p => p.Name, p => p.Value);
+
+                                var Ref = modelContent["ref"].ToString();
+                                var commits = JArray.Parse(modelContent["commits"].ToString());
+
                                 build.Append("# Repo Push Event\n- ");
                                 title = $"{pushchild["name"]}提交源码";
-                            }
-                        }
 
-                        build.Append($"Repo: **[{repositorychild["name"].ToString()}]({html_url})**\n- Ref: **[{Ref.Substring(Ref.LastIndexOf("/") + 1)}]({html_url}/git/tree/{Ref.Substring(Ref.LastIndexOf("/") + 1)})**\n- Pusher: **{pushchild["name"]}**\n");
-                        build.Append($"## Total {commits.Count} commits(s)\n\u003e ");
-                        var i = 0;
-                        foreach (var item in commits)
-                        {
-                            var author = JObject.Parse(item["author"].ToString());
-                            build.Append($"{i}. [{item["id"].ToString().Substring(0, 7)}]({html_url}/{Ref.Substring(Ref.LastIndexOf("/") + 1)}/commit/{item["id"].ToString()}) {author["name"].ToString()} - {item["message"].ToString()} ");
-                            if (i < commits.Count)
-                            {
-                                build.Append("\u003e ");
+                                build.Append($"Repo: **[{repositorychild["name"].ToString()}]({html_url})**\n- Ref: **[{Ref.Substring(Ref.LastIndexOf("/") + 1)}]({html_url}/git/tree/{Ref.Substring(Ref.LastIndexOf("/") + 1)})**\n- Pusher: **{pushchild["name"]}**\n");
+                                build.Append($"## Total {commits.Count} commits(s)\n\u003e ");
+                                var i = 0;
+                                foreach (var item in commits)
+                                {
+                                    var author = JObject.Parse(item["author"].ToString());
+                                    build.Append($"{i}. [{item["id"].ToString().Substring(0, 7)}]({html_url}/{Ref.Substring(Ref.LastIndexOf("/") + 1)}/commit/{item["id"].ToString()}) {author["name"].ToString()} - {item["message"].ToString()} ");
+                                    if (i < commits.Count)
+                                    {
+                                        build.Append("\u003e ");
+                                    }
+                                    i++;
+                                }
                             }
-                            i++;
+                            else if (dic["X-Coding-Event"] == "merge request")
+                            {
+                                var sender = modelContent["sender"];
+
+                                var mergeRequest = JObject.Parse(modelContent["mergeRequest"].ToString());
+                                var head = JObject.Parse(mergeRequest["head"].ToString());
+                                var fromref = head["ref"].ToString();
+
+                                var baseinfo = JObject.Parse(mergeRequest["base"].ToString());
+                                var toref = baseinfo["ref"].ToString();
+
+                                XTrace.WriteLine(fromref);
+
+                                build.Append("# Repo Merge Event\n- ");
+                                title = $"{sender["name"]}申请合并";
+
+                                build.Append($"Repo: **[{repositorychild["name"].ToString()}]({html_url})**\n- From Ref: **[{fromref}]({html_url}/git/tree/{fromref})**\n- To Ref: **[{toref}]({html_url}/git/tree/{toref})**\n- Info: **[{mergeRequest["title"].ToString()}]({mergeRequest["url"].ToString()})**");
+                            }
                         }
 
                         //actionCard内容
