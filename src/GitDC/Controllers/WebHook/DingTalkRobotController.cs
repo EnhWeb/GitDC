@@ -144,7 +144,7 @@ namespace GitDC.Controllers
                                 build.Append("# Repo Merge Event\n- ");
                                 title = $"{sender["name"]}申请合并";
 
-                                build.Append($"Repo: **[{repositorychild["name"].ToString()}]({html_url})**\n- From Ref: **[{fromref}]({html_url}/git/tree/{fromref})**\n- To Ref: **[{toref}]({html_url}/git/tree/{toref})**\n- Info: **[{mergeRequest["title"].ToString()}]({mergeRequest["url"].ToString()})**");
+                                build.Append($"Repo: **[{repositorychild["name"].ToString()}]({html_url})**\n- From Ref: **[{fromref}]({html_url}/git/tree/{fromref})**\n- To Ref: **[{toref}]({html_url}/git/tree/{toref})**\n- Info: **[{mergeRequest["title"].ToString()}]({mergeRequest["url"].ToString()})**\n-  Sender: **{sender["name"]}**\n");
                             }
                         }
 
