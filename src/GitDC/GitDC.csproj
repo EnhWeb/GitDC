@@ -39,16 +39,16 @@
   <ItemGroup>
     <PackageReference Include="AngleSharp" Version="0.13.0-alpha-764" />
     <PackageReference Include="BuildBundlerMinifier" Version="2.9.406" />
-    <PackageReference Include="Ding.Caches" Version="1.0.0-preview-20190818-01" />
-    <PackageReference Include="Ding.Captcha" Version="1.0.0-preview-20190818-01" />
-    <PackageReference Include="Ding.Drawing" Version="1.0.0-preview-20190818-01" />
-    <PackageReference Include="Ding.Encryption" Version="1.0.0-preview-20190818-01" />
-    <PackageReference Include="Ding.MailKit" Version="1.0.0-preview-20190818-01" />
-    <PackageReference Include="Ding.Offices.Excels.Npoi" Version="1.0.0-preview-20190818-01" />
-    <PackageReference Include="Ding.Schedulers" Version="1.0.0-preview-20190818-01" />
-    <PackageReference Include="Ding.Swashbuckle" Version="1.0.0-preview-20190818-01" />
-    <PackageReference Include="Ding.TimedJob" Version="1.0.0-preview-20190818-01" />
-    <PackageReference Include="Ding.Tools.Sms" Version="1.0.0-preview-20190818-01" />
+    <PackageReference Include="Ding.Caches" Version="1.0.0-preview-20190828-01" />
+    <PackageReference Include="Ding.Captcha" Version="1.0.0-preview-20190828-01" />
+    <PackageReference Include="Ding.Drawing" Version="1.0.0-preview-20190828-01" />
+    <PackageReference Include="Ding.Encryption" Version="1.0.0-preview-20190828-01" />
+    <PackageReference Include="Ding.MailKit" Version="1.0.0-preview-20190828-01" />
+    <PackageReference Include="Ding.Offices.Excels.Npoi" Version="1.0.0-preview-20190828-01" />
+    <PackageReference Include="Ding.Schedulers" Version="1.0.0-preview-20190828-01" />
+    <PackageReference Include="Ding.Swashbuckle" Version="1.0.0-preview-20190828-01" />
+    <PackageReference Include="Ding.TimedJob" Version="1.0.0-preview-20190828-01" />
+    <PackageReference Include="Ding.Tools.Sms" Version="1.0.0-preview-20190828-01" />
     <PackageReference Include="LibGit2Sharp.NativeBinaries" Version="2.0.289" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
@@ -64,7 +64,7 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
     <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="4.5.1" />
     <PackageReference Include="System.DirectoryServices.Protocols" Version="4.5.0" />
-    <PackageReference Include="TensorFlow.NET" Version="0.10.10" />
+    <PackageReference Include="TensorFlow.NET" Version="0.11.1" />
   </ItemGroup>
 
   <ItemGroup>
