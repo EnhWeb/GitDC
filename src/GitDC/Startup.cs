@@ -118,23 +118,31 @@ namespace GitDC
                     config.DBConfig.FilePath = $@"{Directory.GetCurrentDirectory()}\wwwroot";
                     config.DBConfig.FileName = "cache.db";
                 }, "lgb").WithMessagePack();
+
                 //Redis缓存
                 option.UseCSRedis(config =>
                 {
-                    config.DBConfig = new CSRedisDBOptions
-                    {
-                        ConnectionStrings = new List<string>
+                    config.DBConfig.ConnectionStrings = new List<string>
                         {
                             SiteSetting.Current.WebConfig.Redis_Configuration
-                        }
-                    };
-                }, "redis1").WithMessagePack();//with messagepack serialization
+                        };
+                    config.SerializerName = "msgpack-name";
+                }, "redis1");
                 ;
+
                 //option.UseRedis(config =>
                 //{
                 //    config.DBConfig.Endpoints.Add(new ServerEndPoint(Configuration["Redis:Ip"], Configuration["Redis:Port"].ToInt()));
-                //}, "redis1").WithMessagePack();//with messagepack serialization
+                //    config.DBConfig.Database = 5;
+                //}, "redis2");
                 //;
+
+                // serializers
+                option
+                    .WithMessagePack("msgpack-name")
+                    .WithMessagePack("redis1")
+                    ;
+
             });
 
             //添加业务锁
@@ -225,9 +233,6 @@ namespace GitDC
 
             services.AddMemoryCache();//使用本地缓存必须添加
             services.AddSession();
-
-            // 注册第三方登录
-            services.AddLogin();
 
             //注册Cookie服务
             services.AddCookieManager(options =>
