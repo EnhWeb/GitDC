@@ -18,10 +18,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{4002EFD7-4382-424F-925C-2AD768BF1352}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitDC", "Demo\GitDC3\GitDC.csproj", "{AF259C18-C14D-46F3-9C7B-3BCC2C0701B2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,16 +44,9 @@ Global
 		{9FE051C0-5252-4F9A-8411-28532ADBA823}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FE051C0-5252-4F9A-8411-28532ADBA823}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FE051C0-5252-4F9A-8411-28532ADBA823}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF259C18-C14D-46F3-9C7B-3BCC2C0701B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF259C18-C14D-46F3-9C7B-3BCC2C0701B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF259C18-C14D-46F3-9C7B-3BCC2C0701B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF259C18-C14D-46F3-9C7B-3BCC2C0701B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{AF259C18-C14D-46F3-9C7B-3BCC2C0701B2} = {4002EFD7-4382-424F-925C-2AD768BF1352}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0C9974C-4217-48A5-9CA1-BCB75409559F}
