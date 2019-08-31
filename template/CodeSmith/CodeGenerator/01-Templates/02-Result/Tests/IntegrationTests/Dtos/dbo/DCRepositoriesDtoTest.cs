@@ -51,10 +51,11 @@ namespace GitDC.Test.Integration.Dtos.dbo {
             Assert.Equal( DCRepositoriesTest.NumOpenPulls,dto.NumOpenPulls );
             Assert.Equal( DCRepositoriesTest.NumPulls,dto.NumPulls );
             Assert.Equal( DCRepositoriesTest.Size,dto.Size );
-            Assert.Equal( DCRepositoriesTest.UserID,dto.UserID );
             Assert.Equal( DCRepositoriesTest.UserName,dto.UserName );
             Assert.Equal( DCRepositoriesTest.CreationTime,dto.CreationTime );
+            Assert.Equal( DCRepositoriesTest.CreatId,dto.CreatId );
             Assert.Equal( DCRepositoriesTest.LastModifiTime,dto.LastModifiTime );
+            Assert.Equal( DCRepositoriesTest.LastModifiId,dto.LastModifiId );
             Assert.Equal( DCRepositoriesTest.IsDeleted,dto.IsDeleted );
             Assert.Equal( DCRepositoriesTest.Version,dto.Version );
         }
@@ -76,10 +77,11 @@ namespace GitDC.Test.Integration.Dtos.dbo {
             Assert.Equal( DCRepositoriesTest.NumOpenPulls,entity.NumOpenPulls );
             Assert.Equal( DCRepositoriesTest.NumPulls,entity.NumPulls );
             Assert.Equal( DCRepositoriesTest.Size,entity.Size );
-            Assert.Equal( DCRepositoriesTest.UserID,entity.UserID );
             Assert.Equal( DCRepositoriesTest.UserName,entity.UserName );
             Assert.Equal( DCRepositoriesTest.CreationTime,entity.CreationTime );
+            Assert.Equal( DCRepositoriesTest.CreatId,entity.CreatId );
             Assert.Equal( DCRepositoriesTest.LastModifiTime,entity.LastModifiTime );
+            Assert.Equal( DCRepositoriesTest.LastModifiId,entity.LastModifiId );
             Assert.Equal( DCRepositoriesTest.IsDeleted,entity.IsDeleted );
             Assert.Equal( DCRepositoriesTest.Version,entity.Version );
         }

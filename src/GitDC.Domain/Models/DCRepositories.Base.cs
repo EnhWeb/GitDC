@@ -91,12 +91,6 @@ namespace GitDC.Domain.Models {
         [Column( "Size" )]
         public decimal? Size { get; set; }
         /// <summary>
-        /// 归属用户
-        /// </summary>
-        [DisplayName( "归属用户" )]
-        [Column( "UserID" )]
-        public long? UserID { get; set; }
-        /// <summary>
         /// 用户名称
         /// </summary>
         [DisplayName( "用户名称" )]
@@ -110,11 +104,23 @@ namespace GitDC.Domain.Models {
         [Column( "CreationTime" )]
         public DateTime? CreationTime { get; set; }
         /// <summary>
+        /// 创建人编号
+        /// </summary>
+        [DisplayName( "创建人编号" )]
+        [Column( "CreatId" )]
+        public long? CreatId { get; set; }
+        /// <summary>
         /// 最后修改时间
         /// </summary>
         [DisplayName( "最后修改时间" )]
         [Column( "LastModifiTime" )]
         public DateTime? LastModifiTime { get; set; }
+        /// <summary>
+        /// 最后修改人编号
+        /// </summary>
+        [DisplayName( "最后修改人编号" )]
+        [Column( "LastModifiId" )]
+        public int? LastModifiId { get; set; }
         /// <summary>
         /// 软删除，数据不会被物理删除
         /// </summary>
@@ -137,10 +143,11 @@ namespace GitDC.Domain.Models {
             AddDescription( t => t.NumOpenPulls );
             AddDescription( t => t.NumPulls );
             AddDescription( t => t.Size );
-            AddDescription( t => t.UserID );
             AddDescription( t => t.UserName );
             AddDescription( t => t.CreationTime );
+            AddDescription( t => t.CreatId );
             AddDescription( t => t.LastModifiTime );
+            AddDescription( t => t.LastModifiId );
         }
         
         /// <summary>
@@ -158,10 +165,11 @@ namespace GitDC.Domain.Models {
             AddChange( t => t.NumOpenPulls, other.NumOpenPulls );
             AddChange( t => t.NumPulls, other.NumPulls );
             AddChange( t => t.Size, other.Size );
-            AddChange( t => t.UserID, other.UserID );
             AddChange( t => t.UserName, other.UserName );
             AddChange( t => t.CreationTime, other.CreationTime );
+            AddChange( t => t.CreatId, other.CreatId );
             AddChange( t => t.LastModifiTime, other.LastModifiTime );
+            AddChange( t => t.LastModifiId, other.LastModifiId );
         }
     }
 }

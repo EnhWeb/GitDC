@@ -45,10 +45,6 @@ export class DCRepositoriesViewModel extends ViewModel {
      */
     size;
     /**
-     * 归属用户
-     */
-    userID;
-    /**
      * 用户名称
      */
     userName;
@@ -57,9 +53,17 @@ export class DCRepositoriesViewModel extends ViewModel {
      */
     creationTime;
     /**
+     * 创建人编号
+     */
+    creatId;
+    /**
      * 最后修改时间
      */
     lastModifiTime;
+    /**
+     * 最后修改人编号
+     */
+    lastModifiId;
     /**
      * 软删除，数据不会被物理删除
      */

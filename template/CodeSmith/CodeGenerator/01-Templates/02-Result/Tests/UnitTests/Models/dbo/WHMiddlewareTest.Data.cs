@@ -14,7 +14,7 @@ namespace GitDC.Test.Models.dbo {
         /// <summary>
         /// 编号
         /// </summary>
-        public static readonly Guid Id = "1786f553-88ae-435e-9f41-0fd9bfcbd22a".ToGuid();
+        public static readonly Guid Id = "9ad7ebf8-b967-4323-a231-16041bc53b8a".ToGuid();
         /// <summary>
         /// 名称
         /// </summary>
@@ -75,7 +75,7 @@ namespace GitDC.Test.Models.dbo {
         /// <summary>
         /// 编号
         /// </summary>
-        public static readonly Guid Id2 = "957ca0cb-b9c0-4b6c-beef-552fe762191c".ToGuid();
+        public static readonly Guid Id2 = "15879081-06e8-4dd8-9c33-24171ad2a097".ToGuid();
         /// <summary>
         /// 名称
         /// </summary>

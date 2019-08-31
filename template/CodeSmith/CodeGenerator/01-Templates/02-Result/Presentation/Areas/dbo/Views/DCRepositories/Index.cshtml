@@ -31,16 +31,19 @@
     .mat-column-size {
         max-width: 20%;
     }
-    .mat-column-userID {
-        max-width: 20%;
-    }
     .mat-column-userName {
         max-width: 20%;
     }
     .mat-column-creationTime {
         max-width: 100px;
     }
+    .mat-column-creatId {
+        max-width: 20%;
+    }
     .mat-column-lastModifiTime {
+        max-width: 20%;
+    }
+    .mat-column-lastModifiId {
         max-width: 20%;
     }
     .mat-column-operation {
@@ -78,10 +81,11 @@
     <util-table-column for="NumOpenPulls" sort="true"></util-table-column>
     <util-table-column for="NumPulls" sort="true"></util-table-column>
     <util-table-column for="Size" sort="true"></util-table-column>
-    <util-table-column for="UserID" sort="true"></util-table-column>
     <util-table-column for="UserName" sort="true"></util-table-column>
     <util-table-column for="CreationTime" sort="true"></util-table-column>
+    <util-table-column for="CreatId" sort="true"></util-table-column>
     <util-table-column for="LastModifiTime" sort="true"></util-table-column>
+    <util-table-column for="LastModifiId" sort="true"></util-table-column>
     <util-table-column title="操作" column="operation">
         <util-table-cell>
             <util-a styles="Icon" tooltip="编辑" bind-link="['update',row.id]">

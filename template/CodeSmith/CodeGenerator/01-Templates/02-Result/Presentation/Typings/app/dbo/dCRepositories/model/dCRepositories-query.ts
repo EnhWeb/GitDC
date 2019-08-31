@@ -49,10 +49,6 @@ export class DCRepositoriesQuery extends QueryParameter {
      */
     size;
     /**
-     * 归属用户
-     */
-    userID;
-    /**
      * 用户名称
      */
     userName;
@@ -65,6 +61,10 @@ export class DCRepositoriesQuery extends QueryParameter {
      */
     endCreationTime;
     /**
+     * 创建人编号
+     */
+    creatId;
+    /**
      * 起始最后修改时间
      */
     beginLastModifiTime;
@@ -72,4 +72,8 @@ export class DCRepositoriesQuery extends QueryParameter {
      * 结束最后修改时间
      */
     endLastModifiTime;
+    /**
+     * 最后修改人编号
+     */
+    lastModifiId;
 }

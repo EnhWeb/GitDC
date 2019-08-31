@@ -53,7 +53,7 @@ namespace GitDC.Service.Implements.dbo {
         /// <returns></returns>
         public async Task<List<DCRepositories>> GetListByUserName(string UserName)
         {
-            return await DCRepositoriesRepository.FindAllNoTrackingAsync(x => x.UserName == UserName);
+            return (await DCRepositoriesRepository.FindAllNoTrackingAsync(x => x.UserName == UserName));
         }
 
         /// <summary>

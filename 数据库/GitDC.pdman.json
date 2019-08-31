@@ -521,12 +521,6 @@
               "chnname": "大小"
             },
             {
-              "name": "UserID",
-              "type": "BigInt",
-              "remark": "",
-              "chnname": "归属用户"
-            },
-            {
               "name": "UserName",
               "type": "String50",
               "remark": "",
@@ -540,10 +534,23 @@
               "notNull": false
             },
             {
+              "name": "CreatId",
+              "type": "BigInt",
+              "remark": "",
+              "chnname": "创建人编号",
+              "notNull": false
+            },
+            {
               "name": "LastModifiTime",
               "type": "DateTime",
               "remark": "",
               "chnname": "最后修改时间"
+            },
+            {
+              "name": "LastModifiId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "最后修改人编号"
             },
             {
               "name": "IsDeleted",

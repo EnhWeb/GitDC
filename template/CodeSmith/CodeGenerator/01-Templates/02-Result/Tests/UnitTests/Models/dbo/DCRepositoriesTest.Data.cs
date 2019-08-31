@@ -14,7 +14,7 @@ namespace GitDC.Test.Models.dbo {
         /// <summary>
         /// 编号
         /// </summary>
-        public static readonly Guid Id = "3cc6bbfb-b68c-4b64-b77a-dddea01c3927".ToGuid();
+        public static readonly Guid Id = "dad466e1-8dc6-4be6-b4b0-b8cf5cf14454".ToGuid();
         /// <summary>
         /// 默认分支
         /// </summary>
@@ -56,10 +56,6 @@ namespace GitDC.Test.Models.dbo {
         /// </summary>
         public static readonly decimal? Size = 1;
         /// <summary>
-        /// 归属用户
-        /// </summary>
-        public static readonly long? UserID = "UserID";
-        /// <summary>
         /// 用户名称
         /// </summary>
         public static readonly string UserName = "UserName";
@@ -68,9 +64,17 @@ namespace GitDC.Test.Models.dbo {
         /// </summary>
         public static readonly DateTime? CreationTime = "CreationTime";
         /// <summary>
+        /// 创建人编号
+        /// </summary>
+        public static readonly long? CreatId = "CreatId";
+        /// <summary>
         /// 最后修改时间
         /// </summary>
         public static readonly DateTime? LastModifiTime = "LastModifiTime";
+        /// <summary>
+        /// 最后修改人编号
+        /// </summary>
+        public static readonly int? LastModifiId = 1;
         /// <summary>
         /// 软删除，数据不会被物理删除
         /// </summary>
@@ -87,7 +91,7 @@ namespace GitDC.Test.Models.dbo {
         /// <summary>
         /// 编号
         /// </summary>
-        public static readonly Guid Id2 = "259b329e-b603-4b2b-8f09-5e1cc37b02a2".ToGuid();
+        public static readonly Guid Id2 = "08dc0bcd-509e-4b48-9395-9dfbf8bd6697".ToGuid();
         /// <summary>
         /// 默认分支
         /// </summary>
@@ -129,10 +133,6 @@ namespace GitDC.Test.Models.dbo {
         /// </summary>
         public static readonly decimal? Size2 = 2;
         /// <summary>
-        /// 归属用户
-        /// </summary>
-        public static readonly long? UserID2 = "UserID2";
-        /// <summary>
         /// 用户名称
         /// </summary>
         public static readonly string UserName2 = "UserName2";
@@ -141,9 +141,17 @@ namespace GitDC.Test.Models.dbo {
         /// </summary>
         public static readonly DateTime? CreationTime2 = "CreationTime2";
         /// <summary>
+        /// 创建人编号
+        /// </summary>
+        public static readonly long? CreatId2 = "CreatId2";
+        /// <summary>
         /// 最后修改时间
         /// </summary>
         public static readonly DateTime? LastModifiTime2 = "LastModifiTime2";
+        /// <summary>
+        /// 最后修改人编号
+        /// </summary>
+        public static readonly int? LastModifiId2 = 2;
         /// <summary>
         /// 软删除，数据不会被物理删除
         /// </summary>
@@ -172,10 +180,11 @@ namespace GitDC.Test.Models.dbo {
                 NumOpenPulls = NumOpenPulls,
                 NumPulls = NumPulls,
                 Size = Size,
-                UserID = UserID,
                 UserName = UserName,
                 CreationTime = CreationTime,
+                CreatId = CreatId,
                 LastModifiTime = LastModifiTime,
+                LastModifiId = LastModifiId,
                 IsDeleted = IsDeleted,
                 Version = Version,
             };
@@ -197,10 +206,11 @@ namespace GitDC.Test.Models.dbo {
                 NumOpenPulls = NumOpenPulls2,
                 NumPulls = NumPulls2,
                 Size = Size2,
-                UserID = UserID2,
                 UserName = UserName2,
                 CreationTime = CreationTime2,
+                CreatId = CreatId2,
                 LastModifiTime = LastModifiTime2,
+                LastModifiId = LastModifiId2,
                 IsDeleted = IsDeleted2,
                 Version = Version2,
             };

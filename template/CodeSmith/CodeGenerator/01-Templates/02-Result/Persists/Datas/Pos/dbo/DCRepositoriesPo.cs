@@ -49,10 +49,6 @@ namespace GitDC.Data.Pos.dbo{
         /// </summary>  
         public decimal? Size { get; set; }
         /// <summary>
-        /// 归属用户
-        /// </summary>  
-        public long? UserID { get; set; }
-        /// <summary>
         /// 用户名称
         /// </summary>  
         public string UserName { get; set; }
@@ -61,9 +57,17 @@ namespace GitDC.Data.Pos.dbo{
         /// </summary>  
         public DateTime? CreationTime { get; set; }
         /// <summary>
+        /// 创建人编号
+        /// </summary>  
+        public long? CreatId { get; set; }
+        /// <summary>
         /// 最后修改时间
         /// </summary>  
         public DateTime? LastModifiTime { get; set; }
+        /// <summary>
+        /// 最后修改人编号
+        /// </summary>  
+        public int? LastModifiId { get; set; }
         /// <summary>
         /// 软删除，数据不会被物理删除
         /// </summary>  

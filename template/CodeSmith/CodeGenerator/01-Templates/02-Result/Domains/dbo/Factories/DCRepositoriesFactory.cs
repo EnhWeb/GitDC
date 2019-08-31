@@ -20,10 +20,11 @@ namespace GitDC.Domains.Factories {
         /// <param name="numOpenPulls">未关闭的合并请求数量</param>
         /// <param name="numPulls">合并请求数量</param>
         /// <param name="size">大小</param>
-        /// <param name="userID">归属用户</param>
         /// <param name="userName">用户名称</param>
         /// <param name="creationTime">创建时间</param>
+        /// <param name="creatId">创建人编号</param>
         /// <param name="lastModifiTime">最后修改时间</param>
+        /// <param name="lastModifiId">最后修改人编号</param>
         /// <param name="isDeleted">软删除，数据不会被物理删除</param>
         /// <param name="version">处理并发问题</param>
         public static DCRepositories Create( 
@@ -38,10 +39,11 @@ namespace GitDC.Domains.Factories {
             int? numOpenPulls,
             int? numPulls,
             decimal? size,
-            long? userID,
             string userName,
             DateTime? creationTime,
+            long? creatId,
             DateTime? lastModifiTime,
+            int? lastModifiId,
             bool isDeleted,
             Byte[] version
         ) {
@@ -57,10 +59,11 @@ namespace GitDC.Domains.Factories {
             result.NumOpenPulls = numOpenPulls;
             result.NumPulls = numPulls;
             result.Size = size;
-            result.UserID = userID;
             result.UserName = userName;
             result.CreationTime = creationTime;
+            result.CreatId = creatId;
             result.LastModifiTime = lastModifiTime;
+            result.LastModifiId = lastModifiId;
             result.IsDeleted = isDeleted;
             result.Version = version;
             return result;

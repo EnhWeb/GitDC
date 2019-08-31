@@ -73,12 +73,6 @@ namespace GitDC.Service.Dtos.dbo {
         [Display( Name = "大小" )]
         public decimal? Size { get; set; }
         /// <summary>
-        /// 归属用户
-        /// </summary>
-        [Column( "UserID" )]
-        [Display( Name = "归属用户" )]
-        public long? UserID { get; set; }
-        /// <summary>
         /// 用户名称
         /// </summary>
         [StringLength( 50, ErrorMessage = "用户名称输入过长，不能超过50位" )]
@@ -92,11 +86,23 @@ namespace GitDC.Service.Dtos.dbo {
         [Display( Name = "创建时间" )]
         public DateTime? CreationTime { get; set; }
         /// <summary>
+        /// 创建人编号
+        /// </summary>
+        [Column( "CreatId" )]
+        [Display( Name = "创建人编号" )]
+        public long? CreatId { get; set; }
+        /// <summary>
         /// 最后修改时间
         /// </summary>
         [Column( "LastModifiTime" )]
         [Display( Name = "最后修改时间" )]
         public DateTime? LastModifiTime { get; set; }
+        /// <summary>
+        /// 最后修改人编号
+        /// </summary>
+        [Column( "LastModifiId" )]
+        [Display( Name = "最后修改人编号" )]
+        public int? LastModifiId { get; set; }
         /// <summary>
         /// 软删除，数据不会被物理删除
         /// </summary>

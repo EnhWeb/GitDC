@@ -78,11 +78,6 @@ namespace GitDC.Service.Queries.dbo {
         /// </summary>
         [Display( Name = "大小" )]
         public decimal? Size { get; set; }
-        /// <summary>
-        /// 归属用户
-        /// </summary>
-        [Display( Name = "归属用户" )]
-        public long? UserID { get; set; }
         
         private string _userName = string.Empty;
         /// <summary>
@@ -104,6 +99,11 @@ namespace GitDC.Service.Queries.dbo {
         [Display( Name = "结束创建时间" )]
         public DateTime? EndCreationTime { get; set; }
         /// <summary>
+        /// 创建人编号
+        /// </summary>
+        [Display( Name = "创建人编号" )]
+        public long? CreatId { get; set; }
+        /// <summary>
         /// 起始最后修改时间
         /// </summary>
         [Display( Name = "起始最后修改时间" )]
@@ -113,5 +113,10 @@ namespace GitDC.Service.Queries.dbo {
         /// </summary>
         [Display( Name = "结束最后修改时间" )]
         public DateTime? EndLastModifiTime { get; set; }
+        /// <summary>
+        /// 最后修改人编号
+        /// </summary>
+        [Display( Name = "最后修改人编号" )]
+        public int? LastModifiId { get; set; }
     }
 }

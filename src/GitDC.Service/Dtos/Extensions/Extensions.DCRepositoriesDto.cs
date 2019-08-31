@@ -35,10 +35,11 @@ namespace GitDC.Service.Dtos.dbo.Extensions {
                 NumOpenPulls = dto.NumOpenPulls,
                 NumPulls = dto.NumPulls,
                 Size = dto.Size,
-                UserID = dto.UserID,
                 UserName = dto.UserName,
                 CreationTime = dto.CreationTime,
+                CreatId = dto.CreatId,
                 LastModifiTime = dto.LastModifiTime,
+                LastModifiId = dto.LastModifiId,
                     IsDeleted = dto.IsDeleted.SafeValue(),
                 Version = dto.Version,
             };
@@ -87,16 +88,19 @@ namespace GitDC.Service.Dtos.dbo.Extensions {
         //        size : dto.Size,
         //        
         //        
-        //        userID : dto.UserID,
-        //        
-        //        
         //        userName : dto.UserName,
         //        
         //        
         //        creationTime : dto.CreationTime,
         //        
         //        
+        //        creatId : dto.CreatId,
+        //        
+        //        
         //        lastModifiTime : dto.LastModifiTime,
+        //        
+        //        
+        //        lastModifiId : dto.LastModifiId,
         //        
         //        
         //        isDeleted : dto.IsDeleted,
@@ -160,16 +164,19 @@ namespace GitDC.Service.Dtos.dbo.Extensions {
         //        Size = entity.Size,
         //        
         //        
-        //        UserID = entity.UserID,
-        //        
-        //        
         //        UserName = entity.UserName,
         //        
         //        
         //        CreationTime = entity.CreationTime,
         //        
         //        
+        //        CreatId = entity.CreatId,
+        //        
+        //        
         //        LastModifiTime = entity.LastModifiTime,
+        //        
+        //        
+        //        LastModifiId = entity.LastModifiId,
         //        
         //        
         //        IsDeleted = entity.IsDeleted,
