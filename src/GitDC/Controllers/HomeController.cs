@@ -12,18 +12,17 @@ using System.Threading.Tasks;
 
 namespace GitDC.Controllers
 {
-    [Authorize]
     public class HomeController : DCControllerBase
     {
-        public async Task<IActionResult> Index()
-        {
-            var username = HttpContext.User.Identity.Name;
+        //public async Task<IActionResult> Index()
+        //{
+        //    var username = HttpContext.User.Identity.Name;
 
-            var DCRepositoriesService = Ioc.Create<IDCRepositoriesService>();
-            var reps = await DCRepositoriesService.GetListByUserName(username);
+        //    var DCRepositoriesService = Ioc.Create<IDCRepositoriesService>();
+        //    var reps = await DCRepositoriesService.GetListByUserName(username);
 
-            return View(reps);
-        }
+        //    return View(reps);
+        //}
 
         [Authorize]
         public IActionResult Create()

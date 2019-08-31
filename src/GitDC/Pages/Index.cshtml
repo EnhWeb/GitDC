@@ -1,0 +1,31 @@
+﻿@page
+@model GitDC.Pages.IndexModel
+@{
+}
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>@SiteSetting.Current.WebConfig.SiteName</title>
+    <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+
+    <meta name="theme-color" content="#6cc644">
+    <meta name="author" content="GitDC - Git with Ding Chuan" />
+    <meta name="description" content="GitDC (Git with Ding Chuan) is a painless self-hosted Git service written in Net Core" />
+    <meta name="keywords" content="netcore,git,self-hosted,gitdc">
+    <meta name="referrer" content="no-referrer" />
+    @Html.AntiForgeryToken()
+    <link rel="shortcut icon" href="~/assets/img/favicon.ico" />
+
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/assets/css/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/assets/css/bootstrap-reboot.min.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <script src="~/assets/js/bootstrap.min.js"></script>
+</body>
+</html>

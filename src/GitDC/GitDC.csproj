@@ -101,6 +101,10 @@
     <None Include="wwwroot\semantic\themes\default\assets\fonts\icons.woff2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\img\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <!--公共语言运行库（CLR）支持两种类型的垃圾回收：
        工作站垃圾收集，可在所有系统上使用，以及服务器垃圾收集，

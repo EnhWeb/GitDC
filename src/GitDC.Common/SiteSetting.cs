@@ -78,6 +78,12 @@ namespace GitDC.Common
         /// </summary>
         [Description("随机库")]
         public string RandomLibrary { get; set; } = "123456789abcdefghjkmnpqrstuvwxy";
+
+        /// <summary>
+        /// 网站名称
+        /// </summary>
+        [Description("网站名称")]
+        public string SiteName { get; set; } = "GitDC";
     }
 
     /// <summary>
