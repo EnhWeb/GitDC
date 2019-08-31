@@ -36,6 +36,7 @@ namespace GitDC.Controllers
                     var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme, ClaimTypes.Name, ClaimTypes.Role);
                     identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, modelUser.Name));
                     identity.AddClaim(new Claim(ClaimTypes.Name, modelUser.Name));
+                    identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, modelUser.Id.ToString()));
                     identity.AddClaim(new Claim(ClaimTypes.Email, modelUser.Email));
                     var principal = new ClaimsPrincipal(identity);
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
