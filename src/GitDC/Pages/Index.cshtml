@@ -6,8 +6,9 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>@SiteSetting.Current.WebConfig.SiteName</title>
     <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
 
@@ -19,13 +20,75 @@
     @Html.AntiForgeryToken()
     <link rel="shortcut icon" href="~/assets/img/favicon.ico" />
 
-    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/assets/css/bootstrap-grid.min.css" rel="stylesheet" />
-    <link href="~/assets/css/bootstrap-reboot.min.css" rel="stylesheet" />
+    <link href="~/assets/css/pintuer.css" rel="stylesheet" media="all" />
+    <link href="~/assets/css/Index.css" rel="stylesheet" asp-append-version="true" />
+
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="~/assets/js/html5shiv/html5.min.js"></script>
+      <script src="~/assets/js/respondjs/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
+    <div class="container-layout padding-big-top padding-big-bottom">
+        <div class="line">
+            <div class="xl12 xs2 xm2 xb1">
+                <button class="button icon-navicon float-right" data-target="#header-demo2">
+                </button>
+                <img src="~/assets/img/gitdc-sm.png" style="width: 40px;" />
+            </div>
+            <div class=" xl12 xs10 xm10 xb11 padding-top nav-navicon" id="header-demo2">
+                <div class="xs12 xm12 xb9">
+                    <ul class="nav nav-menu nav-inline">
+                        <li><a href="#">首页</a> </li>
+                        <li><a href="#">CSS</a> </li>
+                        <li class="active">
+                            <a href="#">元件<span class="arrow"></span></a>
+                            <ul class="drop-menu">
+                                <li><a href="#">概述</a> </li>
+                                <li>
+                                    <a href="#">网格系统<span class="arrow"></span></a>
+                                    <ul>
+                                        <li><a href="#">响应式布局</a> </li>
+                                        <li><a href="#">非响应式布局</a> </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">图标</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">更多<span class="arrow"></span></a>
+                            <ul class="drop-menu">
+                                <li><a href="#">组件</a> </li>
+                                <li>
+                                    <a href="#">模块<span class="arrow"></span></a>
+                                    <ul>
+                                        <li><a href="#">头部</a> </li>
+                                        <li><a href="#">导航</a> </li>
+                                        <li><a href="#">底部</a> </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden-s hidden-m xb2 xb1-move">
+                    <div class="xl6 xb12 text-red">
+                        400-123-4567
+                    </div>
+                    <div class="xl6 xb12 text-small">
+                        <a href="#" class="win-homepage">设为首页</a> | <a href="#" class="win-favorite">加入收藏</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="~/assets/js/jquery-3.4.1.js"></script>
+    <script src="~/assets/js/vue.js"></script>
+    <script src="~/assets/js/pintuer.js"></script>
+    <script>
 
-    <script src="~/assets/js/bootstrap.min.js"></script>
+    </script>
 </body>
 </html>
