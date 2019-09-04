@@ -79,18 +79,11 @@ namespace GitDC.Handlers
 
     public class BasicAuthenticationOptions : AuthenticationSchemeOptions, IOptions<BasicAuthenticationOptions>
     {
-        private string _realm;
-
         public IServiceCollection ServiceCollection { get; set; }
+
         public BasicAuthenticationOptions Value => this;
-        public string Realm
-        {
-            get { return _realm; }
-            set
-            {
-                _realm = value;
-            }
-        }
+
+        public string Realm { get; set; }
 
         public async Task<ClaimsPrincipal> SignInAsync(string userName, string password)
         {

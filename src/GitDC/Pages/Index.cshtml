@@ -32,17 +32,26 @@
 <body>
     <div class="container-layout">
         <div class="line">
-            <div class="xl12 xs2 xm2 xb1 margin-top">
+            <div class="xl12 xs2 xm2 xb1 margin-top ding-logo">
                 <button class="button icon-navicon float-right" data-target="#header">
                 </button>
                 <img src="~/assets/img/gitdc-sm.png" style="width: 30px;" />
             </div>
-            <div class=" xl12 xs10 xm10 xb11 padding-top nav-navicon" id="header">
+            <div class="xl12 xs10 xm10 xb11 padding-top nav-navicon" id="header">
                 <div class="xs12 xm12 xb9">
                     <ul class="nav nav-menu nav-inline">
-                        <li><a href="#">首页</a> </li>
-                        <li><a href="#">CSS</a> </li>
-                        <li class="active">
+                        <li class="active"><a href="#">首页</a> </li>
+                        @if (HttpContext.User.Identity.Name.IsNullOrEmpty())
+                        {
+                            <li><a href="#">搜索</a> </li>
+                            <li><a href="#">帮助</a> </li>
+                        }
+                        else
+                        {
+
+                        }
+
+                        <li>
                             <a href="#">元件<span class="arrow"></span></a>
                             <ul class="drop-menu">
                                 <li><a href="#">概述</a> </li>
@@ -73,20 +82,18 @@
                     </ul>
                 </div>
                 <div class="hidden-s hidden-m xb2 xb1-move">
-                    <div class="xl6 xb12 text-red">
-                        400-123-4567
-                    </div>
-                    <div class="xl6 xb12 text-small">
-                        <a href="#" class="win-homepage">设为首页</a> | <a href="#" class="win-favorite">加入收藏</a>
-                    </div>
+                    <ul class="nav nav-menu nav-inline">
+                        <li><a href="#"><span class="icon-user padding-right text-big" style="display:inline-block;"></span>注册</a> </li>
+                        <li><a href="#"><span class="icon-sign-in padding-right text-big"></span>登录</a> </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="~/assets/js/jquery-3.4.1.js"></script>
-    <script src="~/assets/js/vue.js"></script>
     <script src="~/assets/js/pintuer.js"></script>
+    <script src="~/assets/js/vue.js"></script>
     <script>
 
     </script>
