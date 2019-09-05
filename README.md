@@ -11,8 +11,6 @@ QQ群：774046050
 
  **如果我的代码对您有用，请打赏一点吧，谢谢，您的打赏是我的动力** 
 
- **源码仅用于交流学习，开源协议为[GPL-3.0](https://gitee.com/kwwwvagaa/net_winform_custom_control/blob/master/LICENSE)，如商业使用请进群联系群主授权** 
-
 下载之后运行dotnet watch run可直接本地运行。数据库为mysql，默认有连接远程服务器测试数据库。
 本地数据库脚本目录：GitDC.Data/DbScripts/Mysql。 后续会持续支持Sqlite/Oracle/Pgsql/SqlServer
 
