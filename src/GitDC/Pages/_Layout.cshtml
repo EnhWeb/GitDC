@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head data-suburl="@SiteSetting.Current.WebConfig.AppSubURL">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    @if (ViewBag.PageIsAdmin == null || (ViewBag.PageIsAdmin != null && !ViewBag.PageIsAdmin))
+    {
+        <meta name="author" content="GitDC" />
+        <meta name="description" content="GitDC is a painless self-hosted Git service" />
+        <meta name="keywords" content="net core, git, self-hosted, gitdc">
+    }
+
+    <meta name="referrer" content="no-referrer" />
+    <meta name="_csrf" content="@Model.CSRF" />
+    <meta name="_suburl" content="@SiteSetting.Current.WebConfig.AppSubURL" />
+
+
+
+    <meta property="og:url" content="http://localhost:3000/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gogs">
+    <meta property="og:description" content="Gogs is a painless self-hosted Git service.">
+    <meta property="og:image" content="http://localhost:3000/img/gogs-lg.png" />
+    <meta property="og:site_name" content="Gogs">
+
+
+    <link rel="shortcut icon" href="/img/favicon.png" />
+
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/libs/jquery.are-you-sure.js"></script>
+    <link rel="stylesheet" href="/assets/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/octicons-4.3.0/octicons.min.css">
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/semantic-2.3.1.min.css">
+    <link rel="stylesheet" href="/css/gogs.css?v=ccddea9a765711f1549140af7b516f0b">
+    <noscript>
+        <style>
+            .dropdown:hover > .menu {
+                display: block;
+            }
+
+            .ui.secondary.menu .dropdown.item > .menu {
+                margin-top: 0;
+            }
+        </style>
+    </noscript>
+    <script src="/js/semantic-2.3.1.min.js"></script>
+    <script src="/js/gogs.js?v=ccddea9a765711f1549140af7b516f0b"></script>
+    <title>Gogs</title>
+    <meta name="theme-color" content="#ff5343">
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

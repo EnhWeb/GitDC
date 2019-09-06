@@ -84,6 +84,10 @@ namespace GitDC.Common
         /// </summary>
         [Description("网站名称")]
         public string SiteName { get; set; } = "GitDC";
+
+        /// <summary>应用子网址</summary>
+        [Description("应用子网址")]
+        public string AppSubURL { get; set; } = "";
     }
 
     /// <summary>
