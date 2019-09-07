@@ -37,34 +37,34 @@
 
 
   <ItemGroup>
-    <PackageReference Include="AngleSharp" Version="0.13.0-alpha-764" />
+    <PackageReference Include="AngleSharp" Version="0.13.0" />
     <PackageReference Include="BuildBundlerMinifier" Version="2.9.406" />
-    <PackageReference Include="Ding.Caches" Version="1.0.0-preview-20190830-01" />
-    <PackageReference Include="Ding.Captcha" Version="1.0.0-preview-20190830-01" />
-    <PackageReference Include="Ding.Drawing" Version="1.0.0-preview-20190830-01" />
-    <PackageReference Include="Ding.Encryption" Version="1.0.0-preview-20190830-01" />
-    <PackageReference Include="Ding.MailKit" Version="1.0.0-preview-20190830-01" />
-    <PackageReference Include="Ding.Offices.Excels.Npoi" Version="1.0.0-preview-20190830-01" />
-    <PackageReference Include="Ding.Schedulers" Version="1.0.0-preview-20190830-01" />
-    <PackageReference Include="Ding.Swashbuckle" Version="1.0.0-preview-20190830-01" />
-    <PackageReference Include="Ding.TimedJob" Version="1.0.0-preview-20190830-01" />
-    <PackageReference Include="Ding.Tools.Sms" Version="1.0.0-preview-20190830-01" />
+    <PackageReference Include="Ding.Caches" Version="1.0.0-preview-20190906-01" />
+    <PackageReference Include="Ding.Captcha" Version="1.0.0-preview-20190906-01" />
+    <PackageReference Include="Ding.Drawing" Version="1.0.0-preview-20190906-01" />
+    <PackageReference Include="Ding.Encryption" Version="1.0.0-preview-20190906-01" />
+    <PackageReference Include="Ding.MailKit" Version="1.0.0-preview-20190906-01" />
+    <PackageReference Include="Ding.Offices.Excels.Npoi" Version="1.0.0-preview-20190906-01" />
+    <PackageReference Include="Ding.Schedulers" Version="1.0.0-preview-20190906-01" />
+    <PackageReference Include="Ding.Swashbuckle" Version="1.0.0-preview-20190906-01" />
+    <PackageReference Include="Ding.TimedJob" Version="1.0.0-preview-20190906-01" />
+    <PackageReference Include="Ding.Tools.Sms" Version="1.0.0-preview-20190906-01" />
     <PackageReference Include="LibGit2Sharp.NativeBinaries" Version="2.0.289" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.MiddlewareAnalysis" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="3.1.6" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.6" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
     <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="4.5.1" />
     <PackageReference Include="System.DirectoryServices.Protocols" Version="4.5.0" />
-    <PackageReference Include="TensorFlow.NET" Version="0.11.1" />
+    <PackageReference Include="TensorFlow.NET" Version="0.11.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -88,17 +88,202 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\img\directory.svg" />
-    <None Include="wwwroot\img\file.svg" />
-    <None Include="wwwroot\img\logo_white.svg" />
     <None Include="wwwroot\js\highlight\highlight.pack.js" />
-    <None Include="wwwroot\js\jquery.min.js" />
-    <None Include="wwwroot\js\jquery.min.map" />
-    <None Include="wwwroot\semantic\.versions" />
-    <None Include="wwwroot\semantic\semantic.js" />
-    <None Include="wwwroot\semantic\semantic.min.js" />
-    <None Include="wwwroot\semantic\themes\default\assets\fonts\icons.svg" />
-    <None Include="wwwroot\semantic\themes\default\assets\fonts\icons.woff2" />
+    <None Include="wwwroot\less\gogs.less" />
+    <None Include="wwwroot\less\_admin.less" />
+    <None Include="wwwroot\less\_base.less" />
+    <None Include="wwwroot\less\_dashboard.less" />
+    <None Include="wwwroot\less\_editor.less" />
+    <None Include="wwwroot\less\_emojify.less" />
+    <None Include="wwwroot\less\_explore.less" />
+    <None Include="wwwroot\less\_form.less" />
+    <None Include="wwwroot\less\_home.less" />
+    <None Include="wwwroot\less\_install.less" />
+    <None Include="wwwroot\less\_markdown.less" />
+    <None Include="wwwroot\less\_organization.less" />
+    <None Include="wwwroot\less\_repository.less" />
+    <None Include="wwwroot\less\_user.less" />
+    <None Include="wwwroot\plugins\autosize-4.0.2\autosize.min.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\.gitattributes" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\.gitignore" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\.npmignore" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\.travis.yml" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\addon\mode\loadmode.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\addon\mode\multiplex.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\addon\mode\multiplex_test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\addon\mode\overlay.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\addon\mode\simple.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\apl\apl.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\asciiarmor\asciiarmor.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\asn.1\asn.1.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\asterisk\asterisk.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\brainfuck\brainfuck.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\clike\clike.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\clike\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\clojure\clojure.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\cmake\cmake.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\cobol\cobol.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\coffeescript\coffeescript.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\commonlisp\commonlisp.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\crystal\crystal.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\css\css.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\css\gss_test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\css\less_test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\css\scss_test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\css\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\cypher\cypher.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\dart\dart.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\diff\diff.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\django\django.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\dockerfile\dockerfile.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\dtd\dtd.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\dylan\dylan.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\dylan\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\d\d.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\ebnf\ebnf.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\ecl\ecl.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\eiffel\eiffel.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\elm\elm.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\erlang\erlang.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\factor\factor.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\fcl\fcl.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\forth\forth.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\fortran\fortran.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\gas\gas.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\gfm\gfm.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\gfm\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\gherkin\gherkin.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\go\go.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\groovy\groovy.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\haml\haml.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\haml\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\handlebars\handlebars.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\haskell-literate\haskell-literate.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\haskell\haskell.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\haxe\haxe.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\htmlembedded\htmlembedded.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\htmlmixed\htmlmixed.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\http\http.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\idl\idl.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\jade\jade.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\javascript\javascript.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\javascript\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\jinja2\jinja2.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\jsx\jsx.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\jsx\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\julia\julia.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\livescript\livescript.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\lua\lua.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\markdown\markdown.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\markdown\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\mathematica\mathematica.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\mbox\mbox.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\meta.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\mirc\mirc.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\mllike\mllike.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\modelica\modelica.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\mscgen\mscgen.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\mscgen\mscgen_test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\mscgen\msgenny_test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\mscgen\xu_test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\mumps\mumps.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\nginx\nginx.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\nsis\nsis.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\ntriples\ntriples.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\octave\octave.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\oz\oz.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\pascal\pascal.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\pegjs\pegjs.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\perl\perl.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\php\php.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\php\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\pig\pig.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\powershell\powershell.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\powershell\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\properties\properties.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\protobuf\protobuf.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\puppet\puppet.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\python\python.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\python\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\q\q.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\rpm\rpm.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\rst\rst.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\ruby\ruby.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\ruby\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\rust\rust.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\rust\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\r\r.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\sass\sass.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\sas\sas.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\scheme\scheme.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\shell\shell.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\shell\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\sieve\sieve.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\slim\slim.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\slim\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\smalltalk\smalltalk.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\smarty\smarty.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\solr\solr.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\soy\soy.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\sparql\sparql.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\spreadsheet\spreadsheet.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\sql\sql.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\stex\stex.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\stex\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\stylus\stylus.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\swift\swift.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\tcl\tcl.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\textile\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\textile\textile.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\tiddlywiki\tiddlywiki.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\tiki\tiki.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\toml\toml.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\tornado\tornado.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\troff\troff.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\ttcn-cfg\ttcn-cfg.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\ttcn\ttcn.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\turtle\turtle.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\twig\twig.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\vbscript\vbscript.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\vb\vb.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\velocity\velocity.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\verilog\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\verilog\verilog.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\vhdl\vhdl.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\vue\vue.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\webidl\webidl.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\xml\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\xml\xml.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\xquery\test.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\xquery\xquery.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\yacas\yacas.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\yaml-frontmatter\yaml-frontmatter.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\yaml\yaml.js" />
+    <None Include="wwwroot\plugins\codemirror-5.17.0\mode\z80\z80.js" />
+    <None Include="wwwroot\plugins\dropzone-4.2.0\dropzone.js" />
+    <None Include="wwwroot\plugins\highlight-9.6.0\highlight.pack.js" />
+    <None Include="wwwroot\plugins\jquery.datetimepicker-2.4.5\jquery.datetimepicker.js" />
+    <None Include="wwwroot\plugins\jquery.minicolors-2.2.3\jquery.minicolors.min.js" />
+    <None Include="wwwroot\plugins\marked-0.3.6\marked.min.js" />
+    <None Include="wwwroot\plugins\notebookjs-0.3.0\notebook.min.js" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\build\pdf.js" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\build\pdf.worker.js" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\LICENSE" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\compatibility.js" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\debugger.js" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\images\annotation-check.svg" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\images\annotation-comment.svg" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\images\annotation-help.svg" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\images\annotation-insert.svg" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\images\annotation-key.svg" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\images\annotation-newparagraph.svg" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\images\annotation-noicon.svg" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\images\annotation-note.svg" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\images\annotation-paragraph.svg" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\images\grab.cur" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\images\grabbing.cur" />
+    <None Include="wwwroot\plugins\pdfjs-1.4.20\web\viewer.js" />
+    <None Include="wwwroot\plugins\simplemde-1.10.1\simplemde.min.js" />
   </ItemGroup>
 
   <PropertyGroup>

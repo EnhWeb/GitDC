@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ding.Datas" Version="1.0.0-preview-20190830-01" />
+    <PackageReference Include="Ding.Datas" Version="1.0.0-preview-20190906-01" />
   </ItemGroup>
 
   <ItemGroup>

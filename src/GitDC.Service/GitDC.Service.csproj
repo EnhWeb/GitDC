@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ding.Applications" Version="1.0.0-preview-20190830-01" />
+    <PackageReference Include="Ding.Applications" Version="1.0.0-preview-20190906-01" />
     <PackageReference Include="LibGit2Sharp" Version="0.27.0-preview-0017" />
   </ItemGroup>
 
