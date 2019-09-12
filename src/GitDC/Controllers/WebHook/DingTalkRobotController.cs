@@ -56,7 +56,7 @@ namespace GitDC.Controllers
             }
 
             var dic = new Dictionary<string, string>();
-            foreach(var row in HttpContext.Request.Headers)
+            foreach (var row in HttpContext.Request.Headers)
             {
                 dic.Add(row.Key, row.Value);
             }
@@ -184,10 +184,6 @@ namespace GitDC.Controllers
                     }
 
                 case 2:
-
-                case 3:
-
-                default:
                     {
                         //消息类型
                         var msgtype = MsgTypeEnum.markdown.ToString();
@@ -238,6 +234,42 @@ namespace GitDC.Controllers
 
                         return Ok(response);
                     }
+
+                case 3:
+
+                default:
+                    {
+                        return Ok();
+                    }
+
+                case 6:
+                    {
+                        //消息类型
+                        var msgtype = MsgTypeEnum.text.ToString();
+
+                        var modelContent = JObject.Parse(content);
+                        var SiteUrl = modelContent["SiteUrl"];
+                        var SiteName = modelContent["SiteName"];
+                        var Message = modelContent["Message"];
+
+                        //文本内容
+                        var text = new Text
+                        {
+                            Content = $"{SiteName}({SiteUrl})出现错误：{Message}@18307555593"
+                        };
+
+                        //指定目标人群
+                        var at = new At()
+                        {
+                            AtMobiles = new List<string>() { "18307555593" },
+                            IsAtAll = false
+                        };
+
+                        var response = await SendDingTalkMessage(new { msgtype, text, at });
+
+                        return Ok(response);
+                    }
+
             }
         }
 

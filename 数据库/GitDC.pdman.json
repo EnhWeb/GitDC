@@ -199,7 +199,7 @@
             {
               "name": "Source",
               "type": "smallint",
-              "remark": "1.腾讯云开发者中心项目，2为禅道，3为码云，4为Gogs，5为Gitea",
+              "remark": "1.腾讯云开发者中心项目，2为禅道，3为码云，4为Gogs，5为Gitea，6为站点检测",
               "chnname": "来源",
               "notNull": true
             },
