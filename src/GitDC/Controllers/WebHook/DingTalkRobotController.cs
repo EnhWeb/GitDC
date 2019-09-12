@@ -255,7 +255,7 @@ namespace GitDC.Controllers
                         //文本内容
                         var text = new Text
                         {
-                            Content = $"{SiteName}({SiteUrl})出现错误：{Message}@18307555593"
+                            Content = $"{SiteName}({SiteUrl}) {Message}@18307555593"
                         };
 
                         //指定目标人群
